@@ -1,0 +1,8 @@
+opencv-python
+numpy
+pyautogui
+selenium
+pydirectinput
+pywin32
+psutil
+pytesseract
