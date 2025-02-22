@@ -1,4 +1,5 @@
-/.venv
+/venv
 /Config.ini
 /screenshot.png
 /__pycache__
+make_venv.bat
