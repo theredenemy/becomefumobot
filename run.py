@@ -11,8 +11,11 @@ if os.path.isdir(venvdir) == False:
     f.write(makevenvbat)
     f.close()
     os.system("make_venv.bat")
-else:
-    os.system(f"call {venvdir}/Scripts/activate.bat")
 
-os.system("python main.py")
+f = open("load_venv.bat", "w" )
+loadvenvbat = f'''call {venvdir}/Scripts/activate.bat
+python main.py'''
+f.write(loadvenvbat)
+f.close()
+os.system("load_venv.bat")
     
