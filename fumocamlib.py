@@ -263,7 +263,9 @@ def set_fumo(fumo):
             if found:
                 pydirectinput.click()
                 endloop12 = 1
-                pydirectinput.moveTo(fumo_button_x,fumo_button_y,duration=1.00)
+                xedit = fumo_button_x - 1
+                yedit = fumo_button_y - 1
+                pydirectinput.moveTo(xedit,yedit)
                 time.sleep(3)
                 pydirectinput.click()
                 pydirectinput.press('tab')
