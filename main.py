@@ -132,7 +132,10 @@ if __name__ == "__main__":
         window_title = win32gui.GetWindowText(win32gui.GetForegroundWindow())
         if window_title == 'Roblox':
             winsound.Beep(frequency=600,duration=900)
-            joinloop = 1
+            if not robloxbotlib.check_game_state('Disconnected') == True:
+                joinloop = 1
+            else:
+                winsound.Beep(frequency=200,duration=1000)  
         else:
             winsound.Beep(frequency=200,duration=1000)
     try:
@@ -154,6 +157,11 @@ if __name__ == "__main__":
     pyautogui.leftClick()
     pyautogui.leftClick()
     time.sleep(10)
+    eloop0 = 0
+    while (eloop0 < 1):
+        if find_icon("resources\\settingsicon.PNG",0.2,False):
+            eloop0 = 1
+    
     if find_icon("resources\\Rules.PNG",0.3,False):
         print("Rules Opened")
         

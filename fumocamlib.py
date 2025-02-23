@@ -237,7 +237,7 @@ def set_fumo(fumo):
     text_to_find = fumo
 
     found = False
-    max_scrolls = 33  # Adjust as needed
+    max_scrolls = 50  # Adjust as needed
     time.sleep(5)
     pyautogui.screenshot(screenshot_file)
     #for _ in range(max_scrolls):
